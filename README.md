@@ -11,7 +11,7 @@ This library is a tool for calculating the strength of passwords in a uniformed 
 <?php
 $e = new \Carnage\Entropy\Entropy();
 echo $e->calculateScore('Password1');
-//35
+//1.5440680443503
 echo $e->calculateScore('12t1^7kl0');
-//27206534396294947
+//16.434673224307
 ```

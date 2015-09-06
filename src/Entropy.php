@@ -7,9 +7,9 @@ class Entropy
     /**
      * Password strength constants. To be perfected.
      */
-    const LOW = 1e12;
-    const MEDIUM = 1e15;
-    const STRONG = 1e18;
+    const LOW = 12;
+    const MEDIUM = 15;
+    const STRONG = 18;
 
     private $groupMembers = [
         'hasLower' => 26,
@@ -96,7 +96,7 @@ class Entropy
             $penalty = 0.5;
         }
 
-        return (pow($entropy, strlen($password)) * $penalty) + $badWord;
+        return log10((pow($entropy, strlen($password)) * $penalty) + $badWord);
     }
 
     private function getGroups($password)
@@ -186,3 +186,9 @@ class Entropy
         $this->badWordCount = count($list);
     }
 }
+
+$e = new \Carnage\Entropy\Entropy();
+echo $e->calculateScore('Password1') . "\n";
+//35
+echo $e->calculateScore('12t1^7kl0') . "\n";
+//27206534396294947
