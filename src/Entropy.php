@@ -186,9 +186,3 @@ class Entropy
         $this->badWordCount = count($list);
     }
 }
-
-$e = new \Carnage\Entropy\Entropy();
-echo $e->calculateScore('Password1') . "\n";
-//35
-echo $e->calculateScore('12t1^7kl0') . "\n";
-//27206534396294947
