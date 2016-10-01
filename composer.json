@@ -1,0 +1,22 @@
+{
+    "name": "carnage/entropy",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Chris Riley",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/carnage/entropy/issues"
+    },
+    "autoload": {
+        "psr-4": {
+            "Carnage\\Entropy\\": "src"
+        }
+    },
+    "require": {
+        "php": ">=5.4.0"
+    }
+}
